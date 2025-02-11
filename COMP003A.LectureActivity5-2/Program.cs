@@ -48,5 +48,37 @@
                 //Validate the initial balance
                 Balance = initialBalance;
             }
+
+            /// <summary>
+            /// Deposits money into the account.
+            /// </summary>
+            /// <param name="amount">Amount to deposit.</param>
+
+            public void Deposit(double amount)
+            {
+                if (amount > 0)
+                {
+                    _balance += amount;
+                    Console.WriteLine($"Deposited: {amount:C}. New Balance: {_balance:C}");
+                }
+            }
+
+            ///<summary>
+            /// Withdraws money from the account if sufficient balance is available.
+            /// </summary>
+            /// <param name="amount">Amount to withdraw.</param>
+
+            public void Withdraw(double amount)
+            {
+                if (amount > 0 && _balance >= amount)
+                {
+                    _balance -= amount;
+                    Console.WriteLine($"Withdrawn: {amount:C}. New Balance: {_balance:C}");
+                }
+                else
+                {
+                    Console.WriteLine("Insufficient funds.");
+                }
+            }
         }
     }
