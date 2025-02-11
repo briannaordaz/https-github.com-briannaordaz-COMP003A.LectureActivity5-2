@@ -1,4 +1,8 @@
-﻿namespace COMP003A.LectureActivity5_2;
+﻿//Author: Brianna Ordaz
+//Course: COMP003A
+//Faculty: Jonathan Cruz
+//Purpose: Demonstrate encapsulation using private fields and properties in C#
+namespace COMP003A.LectureActivity5_2;
 
     internal class Program
     {
