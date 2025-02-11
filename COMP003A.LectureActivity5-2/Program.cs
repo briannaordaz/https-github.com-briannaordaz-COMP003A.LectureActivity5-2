@@ -4,7 +4,17 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            // Create a new BankAccount object
+            BankAccount myAccount = new BankAccount("12345678", 500.00);
+            
+            // Display the account number and initial balance
+            Console.WriteLine($"Account Number: {myAccount.AccountNumber}");
+            Console.WriteLine($"Initial Balance: {myAccount.Balance:C}");
+            
+            // Deposit and withdraw money 
+            myAccount.Deposit(150.00);
+            myAccount.Withdraw(50.00);
+            myAccount.Withdraw(700.00); // Should print an insufficient funds message.
         }
 
         internal class BankAccount
